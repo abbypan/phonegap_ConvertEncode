@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android"
+id="nl.x-services.plugins.toast"
+version="2.0">
+<name>RequestUrlCN</name>
+<description>
+    Request Url CN charset gb2312
+</description>
+<license>MIT</license>
+<engines>
+<engine name="cordova" version=">=3.0.0"/>
+</engines>
+
+<js-module src="www/RequestUrlCN.js" name="RequestUrlCN">
+<clobbers target="window.plugins.requesturlcn" />
+</js-module>
+
+<platform name="wp8">
+<config-file target="config.xml" parent="/*">
+<feature name="RequestUrlCN">
+<param name="wp-package" value="RequestUrlCN"/>
+</feature>
+</config-file>
+<source-file src="src/wp8/RequestUrlCN.cs" />
+</platform>
+
+</plugin>
