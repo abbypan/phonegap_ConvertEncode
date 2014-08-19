@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-id="com.abbypan.urlcn"
+id="com.abbypan.convertencode"
 version="1.0">
-<name>RequestUrlCN</name>
+<name>ConvertEncode</name>
 <description>
-    Request Url CN charset gb2312
+   gb2312 to utf8 
 </description>
 <license>MIT</license>
 <engines>
 <engine name="cordova" version=">=3.0.0"/>
 </engines>
 
-<js-module src="www/RequestUrlCN.js" name="RequestUrlCN">
-<clobbers target="window.plugins.requesturlcn" />
+<js-module src="www/ConvertEncode.js" name="ConvertEncode">
+<clobbers target="window.plugins.ConvertEncode" />
 </js-module>
 
 <platform name="wp8">
 <config-file target="config.xml" parent="/*">
-<feature name="RequestUrlCN">
-<param name="wp-package" value="RequestUrlCN"/>
+<feature name="ConvertEncode">
+<param name="wp-package" value="ConvertEncode"/>
 </feature>
 </config-file>
-<source-file src="src/wp8/RequestUrlCN.cs" />
+<source-file src="src/wp8/ConvertEncode.cs" />
 </platform>
 
 </plugin>
