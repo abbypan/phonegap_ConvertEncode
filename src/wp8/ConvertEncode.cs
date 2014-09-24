@@ -1,14 +1,12 @@
-using System.Windows;
-using System.Windows.Controls;
-using Microsoft.Phone.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Media;
+using WPCordovaClassLib.Cordova;
+using WPCordovaClassLib.Cordova.Commands;
+using WPCordovaClassLib.Cordova.JSON;
 
+using System;
 using System.IO;
 using System.Text; 
-using System;
 
-namespace WPCordovaClassLib.Cordova.Commands
+namespace ConvertEncode
 {
 
     public class ConvertEncode : BaseCommand
@@ -23,6 +21,6 @@ namespace WPCordovaClassLib.Cordova.Commands
 
             string dst = tenc.GetString(tBytes);
             DispatchCommandResult(new PluginResult(PluginResult.Status.OK, dst));
+            }
         }
-    }
 }
