@@ -19,7 +19,7 @@ namespace ConvertEncode
             byte[] fBytes = fenc.GetBytes(src);
             byte[] tBytes = Encoding.Convert(fenc, tenc, fBytes);
 
-            string dst = tenc.GetString(tBytes);
+            string dst = tenc.GetString(tBytes, 0, tBytes.Length);
             DispatchCommandResult(new PluginResult(PluginResult.Status.OK, dst));
             }
         }
