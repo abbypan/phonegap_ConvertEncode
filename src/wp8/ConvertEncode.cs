@@ -11,7 +11,7 @@ namespace ConvertEncode
 
     public class ConvertEncode : BaseCommand
     {
-        public string from_to(string src, string f, string t)
+        public void from_to(string src, string f, string t)
         {            
             Encoding fenc = Encoding.GetEncoding(f);
             Encoding tenc = Encoding.GetEncoding(t);
@@ -20,7 +20,7 @@ namespace ConvertEncode
             byte[] tBytes = Encoding.Convert(fenc, tenc, fBytes);
 
             string dst = tenc.GetString(tBytes, 0, tBytes.Length);
-            DispatchCommandResult(new PluginResult(PluginResult.Status.OK, dst));
+            this.DispatchCommandResult(new PluginResult(PluginResult.Status.OK, dst));
             }
         }
 }
